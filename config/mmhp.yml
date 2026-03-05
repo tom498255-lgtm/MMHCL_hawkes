@@ -1,0 +1,27 @@
+# 基础 RecBole 配置
+model: MMHyperHawkes
+dataset: tiktok
+data_path: ./dataset/
+epochs: 50
+train_batch_size: 2048
+learner: adam
+learning_rate: 0.001
+eval_step: 1
+stopping_step: 10
+loss_type: BPR
+
+# 数据预处理
+
+# === MMHCL 参数 (来源: MMHCL PDF Page 31) ===
+embedding_size: 64
+
+n_ui_layers: 2       # LightGCN 层数
+topk: 10             # KNN 构图的 K
+
+# === HyperHawkes 参数 (来源: HyperHawkes PDF Page 48) ===
+n_clusters: 10       # 意图聚类数
+temp_cluster: 0.1    # SoftKMeans 温度
+sub_time_delta: 3600 # 会话时间阈值
+time_scalar: 86400   # 时间缩放 (1天)
+emb_dropout_prob: 0.1
+
