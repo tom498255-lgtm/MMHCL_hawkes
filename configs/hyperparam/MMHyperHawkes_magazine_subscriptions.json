@@ -1,0 +1,21 @@
+{
+  "mode": "one_factor",
+  "base_params": {
+    "hgnn_layers": 3,
+    "n_clusters": 10,
+    "embedding_size": 64,
+    "n_ui_layers": 2,
+    "learning_rate": 0.001,
+    "emb_dropout_prob": 0.1,
+    "min_support": 0.0002
+  },
+  "separate": {
+    "hgnn_layers": [0, 1, 2, 3, 4, 5],
+    "n_clusters": [2, 4, 8, 10, 12, 16, 32, 64],
+    "embedding_size": [32, 64, 96, 128],
+    "n_ui_layers": [0, 1, 2, 3, 4, 5, 6],
+    "learning_rate": [0.0005, 0.001, 0.002, 0.005],
+    "emb_dropout_prob": [0.0, 0.1, 0.2, 0.3],
+    "min_support": [0.0001, 0.0002, 0.0005, 0.001]
+  }
+}
